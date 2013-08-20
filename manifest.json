@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+
+  "name": "Browser Resize",
+  "description": "Tells you your current browser width and allows you to set it to an exact width. Excellent for testing media queries amd responsive web design.",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon_16.png",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+      "128": "icon_128.png",
+      "16": "icon_16.png",
+      "19": "icon_19.png",
+      "48": "icon_48.png"
+   },
+  "permissions": [ "tabs" ],
+
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Ctrl+E",
+        "mac": "Command+E"
+      }
+    }
+  }
+}

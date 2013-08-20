@@ -1,0 +1,186 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Screen Width</title>
+    <style>
+      body {
+        font-family: 'Helvetica',Arial,sans-serif;
+        font-size: 12px;
+        background: #fff;
+        color: #000;
+        width: 330px;
+      }
+
+      .main {
+        height: 35px;
+      }
+
+      #targetWidth {
+        width: 75px;
+        padding: 8px;
+        margin-left: 15px;
+        border: 1px solid #c2c2c2;
+        border-radius: 2px;
+        background: #e1e1e1;
+        color: #000;
+        outline: none;
+        font-size: 12px;
+        font-weight: 500;
+      }
+
+      ::-webkit-input-placeholder {
+        color: #000;
+      }
+
+      #windowWidth {
+        font-weight: 900; 
+        font-size: 17px; 
+      }
+
+      #setWidth {
+        -webkit-appearance: none;
+        -webkit-box-align: center;
+        -webkit-user-select: none;
+        background-color: rgb(66, 139, 202);
+        background-image: none;
+        border-bottom-color: rgb(53, 126, 189);
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+        border-left-color: rgb(53, 126, 189);
+        border-left-style: solid;
+        border-left-width: 1px;
+        border-right-color: rgb(53, 126, 189);
+        border-right-style: solid;
+        border-right-width: 1px;
+        border-top-color: rgb(53, 126, 189);
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        border-top-style: solid;
+        border-top-width: 1px;
+        box-sizing: border-box;
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+        display: inline-block;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 12px;
+        font-weight: normal;
+        height: 30px;
+        letter-spacing: normal;
+        line-height: 18px;
+        margin-bottom: 0px;
+        margin-left: 5px;
+        margin-right: 0px;
+        margin-top: 0px;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 6px;
+        text-align: center;
+        text-indent: 0px;
+        text-shadow: none;
+        text-transform: none;
+        white-space: nowrap;
+        width: 77px;
+        word-spacing: 0px;
+      }
+      #setWidth:hover, #setWidth:active {
+        background-color: #3276b1;
+        border-color: #285e8e;
+        -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+        box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+      }
+
+      .device-list {
+        width: 100%;
+        margin-top: 10px;
+        padding: 0;
+      }
+
+      .device {
+        height: 15px;
+        border-top: 1px solid #c2c2c2;
+        font-size: 13px;
+        font-weight: 700;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+      }
+
+      .device a {
+        color: #000;
+        text-decoration: none;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 200px;
+      }
+
+      /* Icons from Glyphicons glyphicons.com, distributed under the Creative Commons Attribution 3.0 Unported (CC BY 3.0) glyphicons.com/licence */
+
+      .icon {
+        height: 27px;
+        width: 22px;
+        display: block;
+        float: left;
+        border-right: 1px solid #000;
+        padding-right: 5px;
+      }
+
+      .i-phone {
+        background: url("img/phone.png") no-repeat; 
+        //height: 24px;
+        width: 17px;
+        margin-top: -4px;
+        margin-left: 5px;
+      }
+
+      .i-tablet {
+       background: url("img/tablet.png") no-repeat; 
+        //height: 27px;
+        //width: 22px;
+        margin-top: -5px;
+      }
+
+      .shortcut {
+        color: #c2c2c2;
+        font-size: 12px;
+        font-weight: 500;
+        float: right;
+        margin-right: 10px;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div class="main">
+      Current Width: <span id="windowWidth"></span> px
+      <input type='text' id='targetWidth' name='targetWidth' placeholder="Width" value=''/> <button id="setWidth">Set Width</button>
+
+      <ul class="device-list">
+        <li class="device" >
+          <a href="#" id="iphone">
+            <span class="icon i-phone"></span>
+            iPhone 320 x 480
+            <span class="shortcut">(Ctrl + 1)</span>
+          </a>
+        </li>
+
+        <li class="device" >
+          <a href="#" id="ipad">
+            <span class="icon i-tablet"></span>
+            iPad 768 x 1024
+            <span class="shortcut">(Ctrl + 2)</span>
+          </a>
+        </li>
+        
+      </ul>
+    </div>
+    
+    <script src="jquery-2.0.2.min.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
+
