@@ -2,7 +2,7 @@
   "manifest_version": 2,
 
   "name": "Browser Resize",
-  "description": "Tells you your current browser width and allows you to set it to an exact width. Excellent for testing media queries amd responsive web design.",
+  "description": "Display and set your browser width. Excellent for responsive web design and testing media queries.  Includes keyboard shortcuts!",
   "version": "1.0",
 
   "browser_action": {

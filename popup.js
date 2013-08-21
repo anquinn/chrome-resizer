@@ -8,7 +8,7 @@ $(document).ready(function () {
 
   //set the window to the desired width
   $("#setWidth").click(function () {
-    var targetWidth = parseInt($("#targetWidth", 10).val());
+    var targetWidth = parseInt($("#targetWidth").val(), 10);
     chrome.windows.update(chrome.windows.WINDOW_ID_CURRENT, {width: targetWidth}, function () {});
     getWidth();
     return false;
