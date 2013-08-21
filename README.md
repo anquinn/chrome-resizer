@@ -3,9 +3,9 @@ chrome-resizer
 
 Chrome Extension to resize the browser window.
 
-Tells you your current browser width and allows you to set it to an exact width. Excellent for testing media queries amd responsive web design.
+Display and set your browser width. Excellent for responsive web design and testing media queries. 
 
-Presets for iPhone and iPad screen sizes.
+Includes keyboard shortcuts and presets for iPhone and iPad screen sizes.
 
 
 Keyboard Shortcuts
@@ -20,3 +20,4 @@ The extension allows for numberous keyboard shortcuts to speed up development:
 * Ctrl + Shift + 1 - resizes for iPhone landscape (opens new window with current tab)
 * Ctrl + 2 - resizes for iPad
 * Ctrl + Shift + 2 - resizes for iPad landscape
+* Ctrl + Esc - resets browser window to 1200x800
