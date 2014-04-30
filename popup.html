@@ -1,4 +1,11 @@
 <!doctype html>
+<!--  Created by Andrew Quinn 2013 
+      Distributed under GNU General Public License v3 (GPL-3)
+      No waranty is provided. Use as is.
+      Version 1.1
+      Updated April 30 2014 
+-->
+
 <html>
   <head>
     <title>Screen Width</title>
@@ -8,11 +15,11 @@
         font-size: 12px;
         background: #fff;
         color: #000;
-        width: 330px;
+        width: 331px;
       }
 
       .main {
-        height: 35px;
+        height: 160px;
       }
 
       #targetWidth {
@@ -66,7 +73,7 @@
         font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
         font-size: 12px;
         font-weight: normal;
-        height: 30px;
+        height: 33px;
         letter-spacing: normal;
         line-height: 18px;
         margin-bottom: 0px;
@@ -114,7 +121,7 @@
         padding-top: 10px;
         padding-bottom: 10px;
         padding-left: 10px;
-        padding-right: 200px;
+        padding-right: 89px;
       }
 
       /* Icons from Glyphicons glyphicons.com, distributed under the Creative Commons Attribution 3.0 Unported (CC BY 3.0) glyphicons.com/licence */
@@ -130,17 +137,18 @@
 
       .i-phone {
         background: url("img/phone.png") no-repeat; 
-        //height: 24px;
         width: 17px;
         margin-top: -4px;
         margin-left: 5px;
       }
 
       .i-tablet {
-       background: url("img/tablet.png") no-repeat; 
-        //height: 27px;
-        //width: 22px;
+        background: url("img/tablet.png") no-repeat; 
         margin-top: -5px;
+      }
+
+      .size {
+        font-weight: 500;
       }
 
       .shortcut {
@@ -163,7 +171,7 @@
         <li class="device" >
           <a href="#" id="iphone">
             <span class="icon i-phone"></span>
-            iPhone 320 x 480
+            iPhone 5 <span class="size">- 320 x 568 </span>
             <span class="shortcut">(Ctrl + 1)</span>
           </a>
         </li>
@@ -171,11 +179,18 @@
         <li class="device" >
           <a href="#" id="ipad">
             <span class="icon i-tablet"></span>
-            iPad 768 x 1024
+            iPad <span class="size">- 768 x 1024 </span>
             <span class="shortcut">(Ctrl + 2)</span>
           </a>
         </li>
-        
+
+        <li class="device" >
+          <a href="#" id="iphone-old">
+            <span class="icon i-phone"></span>
+            iPhone (old) <span class="size">- 320 x 480 </span>
+            <span class="shortcut">(Ctrl + 3)</span>
+          </a>
+        </li>        
       </ul>
     </div>
     
