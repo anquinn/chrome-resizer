@@ -2,13 +2,13 @@
 <!--  Created by Andrew Quinn 2013 
       Distributed under GNU General Public License v3 (GPL-3)
       No waranty is provided. Use as is.
-      Version 1.1
-      Updated April 30 2014 
+      Version 2.0
+      Updated May 4 2014 
 -->
 
 <html>
   <head>
-    <title>Screen Width</title>
+    <title>Browser Resize</title>
     <style>
       body {
         font-family: 'Helvetica',Arial,sans-serif;
@@ -16,10 +16,6 @@
         background: #fff;
         color: #000;
         width: 331px;
-      }
-
-      .main {
-        height: 160px;
       }
 
       #targetWidth {
@@ -33,10 +29,6 @@
         outline: none;
         font-size: 12px;
         font-weight: 500;
-      }
-
-      ::-webkit-input-placeholder {
-        color: #000;
       }
 
       #windowWidth {
@@ -103,6 +95,8 @@
         width: 100%;
         margin-top: 10px;
         padding: 0;
+        list-style: none;
+        border-bottom: 1px solid #c2c2c2;
       }
 
       .device {
@@ -128,7 +122,7 @@
 
       .icon {
         height: 27px;
-        width: 22px;
+        width: 25px;
         display: block;
         float: left;
         border-right: 1px solid #000;
@@ -137,13 +131,38 @@
 
       .i-phone {
         background: url("img/phone.png") no-repeat; 
-        width: 17px;
+        width: 18px;
         margin-top: -4px;
-        margin-left: 5px;
+        margin-left: 7px;
       }
 
       .i-tablet {
         background: url("img/tablet.png") no-repeat; 
+        width: 22px;
+        margin-top: -5px;
+        margin-left: 3px;
+      }
+
+      .i-laptop {
+        background: url("img/laptop.png") no-repeat; 
+        background-position: 50% 46%;
+        margin-top: -5px;
+        margin-left: -5px;
+        padding-right: 10px;
+      }
+
+      .i-desktop {
+        background: url("img/desktop.png") no-repeat; 
+        margin-top: -5px;
+      }
+
+      .settings {
+        height: 20px;
+        width: 20px;
+        padding-bottom: 5px;
+        float: right;
+        background: url("img/settings.png") no-repeat; 
+        background-size: 20px 20px;
         margin-top: -5px;
       }
 
@@ -167,34 +186,20 @@
       Current Width: <span id="windowWidth"></span> px
       <input type='text' id='targetWidth' name='targetWidth' placeholder="Width" value=''/> <button id="setWidth">Set Width</button>
 
-      <ul class="device-list">
-        <li class="device" >
+      <ul class="device-list" id="popupList">
+        <!-- <li class="device" >
           <a href="#" id="iphone">
             <span class="icon i-phone"></span>
             iPhone 5 <span class="size">- 320 x 568 </span>
             <span class="shortcut">(Ctrl + 1)</span>
           </a>
-        </li>
-
-        <li class="device" >
-          <a href="#" id="ipad">
-            <span class="icon i-tablet"></span>
-            iPad <span class="size">- 768 x 1024 </span>
-            <span class="shortcut">(Ctrl + 2)</span>
-          </a>
-        </li>
-
-        <li class="device" >
-          <a href="#" id="iphone-old">
-            <span class="icon i-phone"></span>
-            iPhone (old) <span class="size">- 320 x 480 </span>
-            <span class="shortcut">(Ctrl + 3)</span>
-          </a>
-        </li>        
+        </li>  -->
       </ul>
+      <a class="settings" href="#"></a>
     </div>
     
     <script src="jquery-2.0.2.min.js"></script>
+    <script src="functions.js"></script>
     <script src="popup.js"></script>
   </body>
 </html>

@@ -1,0 +1,320 @@
+<!doctype html>
+<!--  Created by Andrew Quinn 2013 
+			Distributed under GNU General Public License v3 (GPL-3)
+			No waranty is provided. Use as is.
+			Version 2.0
+			Updated May 4 2014
+-->
+
+<html>
+	<head>
+		<title>Browser Resize</title>
+		<style>
+			body {
+				font-family: 'Helvetica',Arial,sans-serif;
+				font-size: 12px;
+				background: #fff;
+				color: #000;
+			}
+
+			.title {
+				width: 420px;
+				margin: 0 auto;
+				height: auto;
+				
+			}
+
+			.main {
+				width: 400px;
+				margin: 0 auto;
+				border: 3px solid rgb(66, 139, 202);
+				padding: 10px;
+			}
+
+			#deviceList {
+				width: 100%;
+				margin-top: 10px;
+				padding: 0;
+				list-style: none;
+				border-bottom: 1px solid #c2c2c2;
+			}
+
+			.device {
+				height: 15px;
+				border-top: 1px solid #c2c2c2;
+				font-size: 13px;
+				font-weight: 700;
+				padding-top: 10px;
+				padding-bottom: 10px;
+				padding-left: 10px;
+				-webkit-transition: opacity 3s ease-in-out;
+			}
+
+			.deviceName {
+				color: #000;
+				text-decoration: none;
+				padding-top: 10px;
+				padding-bottom: 10px;
+				padding-left: 10px;
+				padding-right: 89px;
+			}
+
+			/* Icons from Glyphicons glyphicons.com, distributed under the Creative Commons Attribution 3.0 Unported (CC BY 3.0) glyphicons.com/licence */
+
+			.icon {
+				height: 27px;
+				width: 25px;
+				display: block;
+				float: left;
+				border-right: 1px solid #000;
+				padding-right: 5px;
+			}
+
+			.i-phone {
+				background: url("img/phone.png") no-repeat; 
+				width: 18px;
+				margin-top: -4px;
+				margin-left: 7px;
+			}
+
+			.i-tablet {
+				background: url("img/tablet.png") no-repeat; 
+				width: 22px;
+				margin-top: -5px;
+				margin-left: 3px;
+			}
+
+			.i-laptop {
+				background: url("img/laptop.png") no-repeat; 
+				background-position: 50% 46%;
+				margin-top: -5px;
+				margin-left: -5px;
+				padding-right: 10px;
+			}
+
+			.i-desktop {
+				background: url("img/desktop.png") no-repeat; 
+				margin-top: -5px;
+			}
+
+			.size {
+				font-weight: 500;
+			}
+
+			.shortcut {
+				color: #c2c2c2;
+				font-size: 12px;
+				font-weight: 500;
+				float: right;
+				margin-right: 10px;
+			}
+
+			.delete {
+				background: url("img/delete.png") no-repeat; 
+				width: 26px;
+				height: 26px;
+				display: block;
+				float: right;
+				padding: 0 !important;
+				margin-top: -5px;
+				margin-right: 10px;
+			}
+
+			input[type="text"], input[type="number"] {
+				display: block;
+				width: 167px;
+				height: 15px;
+				padding: 6px 12px;
+				font-size: 14px;
+				line-height: 1.0;
+				color: #555;
+				background-color: #fff;
+				background-image: none;
+				border: 1px solid #ccc;
+				border-radius: 4px;
+				-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+				box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+				-webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+				transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+			}
+
+			label {
+				display: block;
+				margin-bottom: 5px;
+				font-weight: 700;
+			}
+
+			#name {
+				width: 373px;
+			}
+
+			#width, #height {
+				display: inline-block;
+			}
+
+			button, .button {
+				-webkit-appearance: none;
+				-webkit-box-align: center;
+				-webkit-user-select: none;
+				background-color: rgb(66, 139, 202);
+				background-image: none;
+				border-bottom-color: rgb(53, 126, 189);
+				border-bottom-left-radius: 3px;
+				border-bottom-right-radius: 3px;
+				border-bottom-style: solid;
+				border-bottom-width: 1px;
+				border-left-color: rgb(53, 126, 189);
+				border-left-style: solid;
+				border-left-width: 1px;
+				border-right-color: rgb(53, 126, 189);
+				border-right-style: solid;
+				border-right-width: 1px;
+				border-top-color: rgb(53, 126, 189);
+				border-top-left-radius: 3px;
+				border-top-right-radius: 3px;
+				border-top-style: solid;
+				border-top-width: 1px;
+				box-sizing: border-box;
+				color: rgb(255, 255, 255);
+				cursor: pointer;
+				display: inline-block;
+				font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+				font-size: 12px;
+				font-weight: normal;
+				height: 33px;
+				letter-spacing: normal;
+				line-height: 18px;
+				margin-bottom: 0px;
+				margin-left: 0px;
+				margin-right: 0px;
+				margin-top: 10px;
+				padding-bottom: 5px;
+				padding-left: 10px;
+				padding-right: 10px;
+				padding-top: 6px;
+				text-align: center;
+				text-indent: 0px;
+				text-shadow: none;
+				text-transform: none;
+				white-space: nowrap;
+				width: 85px;
+				word-spacing: 0px;
+			}
+			button:hover, button:active, .button:hover, .button:active {
+				background-color: #3276b1;
+				border-color: #285e8e;
+				-webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+				box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+			}
+
+			#default, #feedback {
+				color: #333;
+				background-color: #fff;
+				border-color: #ccc;
+				width: 100px;
+			}
+
+			#feedback {
+				width: 110px;
+				text-decoration: none;
+				//margin-top: 9px;
+			}
+
+			input[type="radio"] {
+				background-image: url("img/tablet.png");
+				-webkit-appearance: none;
+				width: 35px;
+				height: 35px;
+
+				background-repeat: no-repeat;
+				background-position: center;
+				cursor: pointer;
+				border: 1px solid #ccc;
+				border-radius: 3px;
+				outline: none;
+			}
+
+			input[type="radio"]:checked {
+				opacity: 1;
+				border-width: 2px;
+				border-color: rgb(66, 139, 202);
+			}
+
+			h2 {
+				margin: 0;
+			}
+
+			.warning {
+				border-color: #a94442 !important;
+			}
+
+			.warning:focus {
+				outline: 0;
+				border-color: #843534 !important;
+				-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 10px #ce8483 !important;
+				box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 10px #ce8483 !important;
+			}
+
+			.right {
+				float: right;
+			}
+
+			p {
+				margin-top: 5px;
+				margin-bottom: 5px;
+			}
+
+
+		</style>
+	</head>
+
+	<body>
+		<div class="title">
+			<h1>Browser Resize</h1>
+		</div>
+		
+		<div class="main">
+			<h2>Devices</h2>
+
+			<ul class="sortable" id="deviceList">
+					
+			</ul>
+
+			<br>
+
+			<h2>Add New Device</h2>
+			<form id="newDevice">
+				<label for="name">Device Type</label>
+				<input name="type" type="radio" value="phone" checked="checked" style="background-image: url('img/phone.png')"></input>
+				<input name="type" type="radio" value="tablet" style="background-image: url('img/tablet.png')"></input>
+				<input name="type" type="radio" value="laptop" style="background-image: url('img/laptop.png')"></input>
+				<input name="type" type="radio" value="desktop" style="background-image: url('img/desktop.png')"></input>
+
+				<br>
+
+				<label for="name">Device Name</label>
+				<input type="text" id="name" class="form" placeholder="name" maxlength="20" required></input>
+				<br>
+				<label for="name">Device Height x Width</label>
+				<input type="number" id="height" class="form" min="100" placeholder="height" required></input> x
+				<input type="number" id="width" class="form" min="100" placeholder="width" required></input>
+				
+				<button type="submit" id="add">Add Device</button>
+				<div class="right">
+					<button type="button" id="default">Reset Defaults</button>
+					<a class="button" id="feedback" href="https://chrome.google.com/webstore/support/cloloejkphcpbkohccpmkhbgpgplngcd?hl=en&gl=CA#bug" target="_blank">Send Feedback</a>
+				</div>
+				
+			</form>
+			
+		</div>
+		<div class="title">
+			<p>&copy; Andrew Quinn<p>
+		</div>
+		
+		<script src="jquery-2.0.2.min.js"></script>
+		<script src="functions.js"></script>
+		<script src="options.js"></script>
+	</body>
+</html>
+

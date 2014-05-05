@@ -1,0 +1,117 @@
+<!doctype html>
+<!--  Created by Andrew Quinn 2013 
+			Distributed under GNU General Public License v3 (GPL-3)
+			No waranty is provided. Use as is.
+			Version 2.0
+			Updated May 4 2014
+-->
+
+<html>
+	<head>
+		<title>Browser Resize</title>
+		<style>
+			body {
+				font-family: 'Helvetica',Arial,sans-serif;
+				font-size: 12px;
+				background: #fff;
+				color: #000;
+			}
+
+			.title {
+				width: 520px;
+				margin: 0 auto;
+				height: auto;
+				
+			}
+
+			.main {
+				width: 500px;
+				margin: 0 auto;
+				border: 3px solid rgb(66, 139, 202);
+				padding: 10px;
+			}
+
+			p {
+				margin-top: 5px;
+				margin-bottom: 5px;
+			}
+
+			li {
+				padding-bottom: 5px;
+			}
+
+			.bold {
+				font-weight: 700;
+			}
+
+			.bold2 {
+				font-weight: 700;
+				font-size: 15px;
+			}
+
+			.feedback {
+				font-size: 15px;
+				line-height: 2;
+			}
+
+
+		</style>
+	</head>
+
+	<body>
+		<div class="title">
+			<h1>Browser Resize</h1>
+		</div>
+		
+		<div class="main">
+			<h2>Welcome</h2>
+			<p>Thank you for downloading Browser Resize, I hope you find it useful.</p>
+
+
+
+			<h2>What's New in 2.0</h2>
+			<p>2.0 was an entire rewrite.</p>
+
+			<ul>
+				<li> New keyboard shortcut for your convenience.  Just use Ctrl + Right Arrow to bring up the popup.</li>
+				<li> New higher resolution icon.</li>
+				<li> You are now able to save your own presets via the options page.  Just click the gear icon. </li>
+				<li> The first 10 presets are hotkeyed to Ctrl + 1-0 once the extension popup is open. </li>
+				<li> The inverse of all your presets are available by adding Shift to the keyboard shortcut.  <span class="bold">ie.</span> Ctrl + Shift + 1 will resize the window to the opposite of preset one (height becomes width, and width becomes height, think landscape vs. portrait).</li>
+			</ul>
+
+			<h2>How to Use</h2>
+			<ul>
+				<li> Ctrl + Right Arrow - opens the extension popup </li>
+				<li> Up - manually increases browser width </li>
+				<li> Down - manually decreases browser width </li>
+				<li> Ctrl + 1-0 - resizes to saved preset </li>
+				<li> Ctrl + Shift + 1-0 - resizes to the landscape/inverse of saved preset</li>
+			</ul>
+
+			<p>Cmd is substituted for Ctrl on Mac.</p>
+
+			<br>
+
+			<p><span class="bold">NOTE:</span> Because Cmd + Shift + 3 and Cmd + Shift + 4 takes screen shots on a Mac, landscape or inverse of preset 3 & 4 won't work on a Mac.</p>
+
+			<br>
+
+			<p class="bold2">As always if you have any questions, suggestions, or find a bug please let me know. Writing it in a review doesn't help me fix it.  If you find the extension useful please consider leaving a 5 star rating.</p>
+
+			<p>
+				<a class="feedback" id="feedback" href="https://chrome.google.com/webstore/support/cloloejkphcpbkohccpmkhbgpgplngcd?hl=en&gl=CA#bug" target="_blank">Send Feedback</a>
+			</p>
+
+			
+		</div>
+		<div class="title">
+			<p>&copy; Andrew Quinn<p>
+		</div>
+		
+		<script src="jquery-2.0.2.min.js"></script>
+		<script src="functions.js"></script>
+		<script src="options.js"></script>
+	</body>
+</html>
+
