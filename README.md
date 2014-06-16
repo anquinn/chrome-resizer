@@ -22,4 +22,4 @@ The extension allows for numberous keyboard shortcuts to speed up development:
 
 Cmd is substituted for Ctrl on Mac.
 
-NOTE: Because Cmd + Shift + 3 on a Mac takes a screen shot landscape for iPhone 4s and below doesn't work on a Mac.
+NOTE: Because Cmd + Shift + 3 and Cmd + Shift + 4 on a Mac take a screenshot, landscape orientarion for the devices in position 3 and 4 won't work on a Mac.
