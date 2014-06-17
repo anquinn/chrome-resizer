@@ -128,7 +128,7 @@ function displayPopup(list) {
 
 		count++;
 
-		console.log(contents);
+		//console.log(contents);
 
 		$("#popupList").append(contents);
 	}
