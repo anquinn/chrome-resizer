@@ -71,7 +71,7 @@ function addDevice (list) {
 		"height": height.value
 	}
 
-	console.log(device);
+	//console.log(device);
 
 	list.push(device);
 

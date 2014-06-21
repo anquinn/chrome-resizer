@@ -5,7 +5,11 @@ Chrome Extension to resize the browser window.
 
 Display and set your browser width. Excellent for responsive web design and testing media queries. 
 
-Includes keyboard shortcuts and presets for iPhone and iPad screen sizes.
+With quick presets for mobile devices, check media queries or your mobile website with a single keystroke.  
+
+You can set your own custom presets for your devices.  
+
+Your presets will be synced across all devices currently logged into your account.
 
 
 Keyboard Shortcuts
@@ -13,7 +17,7 @@ Keyboard Shortcuts
 
 The extension allows for numberous keyboard shortcuts to speed up development:
 
-* Ctrl + Shift + E - opens the extension popup 
+* Ctrl + Right Arrow - opens the extension popup 
 * Up - manually increases browser width
 * Down - manually decreases browser width
 * Ctrl + 1-0 - resizes to saved preset
