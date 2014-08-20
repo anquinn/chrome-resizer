@@ -3,7 +3,7 @@
 			Distributed under GNU General Public License v3 (GPL-3)
 			No waranty is provided. Use as is.
 			Version 2.0
-			Updated June 16 2014
+			Updated Aug 20 2014
 -->
 
 <html>
@@ -219,11 +219,11 @@
 				box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 			}
 
-			#default, #feedback {
+			#default, #feedback, #shortcut {
 				color: #333;
 				background-color: #fff;
 				border-color: #ccc;
-				width: 100px;
+				width: 120px;
 			}
 
 			#feedback {
@@ -267,6 +267,15 @@
 				float: right;
 			}
 
+			.note {
+				padding-top: 10px;
+				padding-bottom: 30px;
+			}
+
+			#shortcut {
+				margin-top: 0;
+			}
+
 
 		</style>
 	</head>
@@ -306,6 +315,12 @@
 				<div class="right">
 					<button type="button" id="default">Reset Defaults</button>
 					<a class="button" id="feedback" href="https://chrome.google.com/webstore/support/cloloejkphcpbkohccpmkhbgpgplngcd?hl=en&gl=CA#bug" target="_blank">Send Feedback</a>
+				</div>
+
+				<div class="note">
+					<p>Note: The extension's keyboard shortcut is handled by Chrome itself, not the extension.  If you'd like to chnage it scroll to the bottom of the page and click on the "Keyboard shortcuts" link on the right. You can set whatever shortcut you'd like.</p>
+
+					<button type="button" class="right" id="shortcut">Change Shortcut</button>
 				</div>
 				
 			</form>

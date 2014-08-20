@@ -2,7 +2,7 @@
 // Distributed under GNU General Public License v3 (GPL-3)
 // No waranty is provided. Use as is.
 // Version 2.0
-// Updated May 4 2014
+// Updated Aug 20 2014
 
 var windowWidth;
 var list; 
@@ -10,7 +10,7 @@ var list;
 $(document).ready(function () {
 
 	getDevices().then(function(devices) {
-		console.log("Now we can use the list of devices: " + devices);
+		//console.log("Now we can use the list of devices: " + devices);
 		list=devices;
 		displayPopup(list);
 	})

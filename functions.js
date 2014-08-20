@@ -2,7 +2,7 @@
 // Distributed under GNU General Public License v3 (GPL-3)
 // No waranty is provided. Use as is.
 // Version 2.0
-// Updated May 4 2014
+// Updated June 16 2014
 
 var defaultDevices=[
 	{
@@ -29,6 +29,10 @@ var defaultDevices=[
 
 $( ".settings" ).click(function() {
 	chrome.tabs.create({'url': chrome.extension.getURL("options.html") } )
+});
+
+$( "#shortcut" ).click(function() {
+	chrome.tabs.create({'url': "chrome://extensions/" } )
 });
 
 
@@ -123,8 +127,16 @@ function displayPopup(list) {
 		else if (device.type == "desktop") {
 			type="<span class='icon i-desktop'></span>";
 		}
+
+		var shortcut = "<span class='shortcut'>(Ctrl + " + count + ")</span> </a> </li>";
+
+		if (count === 10) 
+			shortcut = "<span class='shortcut'>(Ctrl + 0)</span> </a> </li>";
+
+		else if (count > 10)
+			shortcut = "<span class='shortcut'></span> </a> </li>";
 		
-		var contents = "<li class='device'><a href='#'>" + type + device.name + "<span class='size'> - " + device.width + " x " + device.height +  "</span>" +"<span class='shortcut'>(Ctrl + " + count + ")</span> </a> </li>";
+		var contents = "<li class='device'><a href='#'>" + type + device.name + "<span class='size'> - " + device.width + " x " + device.height +  "</span>" + shortcut;
 
 		count++;
 
